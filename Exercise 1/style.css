@@ -141,4 +141,5 @@ select:focus-visible {
     color: #fff;
     background-color: black;
     border-radius: 5px;
+    cursor: pointer;
 }
