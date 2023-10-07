@@ -2,6 +2,17 @@ import asyncio
 import aiohttp
 import json
 import pandas as pd
+import psycopg2
+from sqlalchemy import create_engine
+
+# Your PostgreSQL database connection parameters
+db_params = {
+    'dbname': 'your_database_name',
+    'user': 'your_username',
+    'password': 'your_password',
+    'host': 'your_host',
+    'port': 'your_port'
+}
 
 async def fetch_data(api_url):
     async with aiohttp.ClientSession() as session:
@@ -42,7 +53,17 @@ async def main():
             "population": populations
         })
 
-        print(df)
+        # Create a database connection and engine
+        conn = psycopg2.connect(**db_params)
+        engine = create_engine(f"postgresql+psycopg2://{db_params['user']}:{db_params['password']}@{db_params['host']}:{db_params['port']}/{db_params['dbname']}")
+
+        # Load the DataFrame into a new table, replacing if it already exists
+        df.to_sql('your_table_name', engine, if_exists='replace', index=False)
+
+        # Close the database connection
+        conn.close()
+
+        print("Data loaded into the PostgreSQL database.")
     else:
         print("Failed to retrieve data from the API.")
 
