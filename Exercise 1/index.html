@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Challenge - Exec 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-teal flex">
+        <p class="hello bold">Hello World</p>
+        <p class="description">This is my web page</p>
+    </header>
+
+    <div class="container flex center">
+        <div class="center-container flex center">
+            <div class="table-selection flex center">
+                <p class="bold">Select a table from the dropdown menu:</p>
+                <select name="table" id="table">
+                    <option value="table-1">Example Table 1</option>
+                </select>
+            </div>
+            <div class="filter-preview">
+                <div class="filter-box flex"> 
+                    <h1>Filters</h1>
+                    <div id="filters-container">
+                        <!-- Existing filter items will be listed here -->
+                    </div>
+                    <div class="flex center">
+                        <input type="text" id="filter-input" placeholder="This is a new filter">
+                        <button class="add-filter bg-teal" onclick="addFilter()">+</button>
+                    </div>
+                </div>
+    
+                <div class="data-preview">
+                    <h1 class="bold">Data preview</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    <script>
+        // JavaScript code
+        function addFilter() {
+        // Get the input value
+        var filterText = document.getElementById("filter-input").value.trim();
+
+        // Check if the input is not empty
+        if (filterText !== "") {
+            // Create a new filter element
+            var filterElement = document.createElement("div");
+            filterElement.className = "filter-item bg-blue";
+            filterElement.textContent = filterText;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'x';
+            deleteButton.classList.add('add-button');
+            deleteButton.onclick = function() {
+                filtersContainer.removeChild(filterElement);
+            };
+
+            filterElement.appendChild(deleteButton);
+
+            // Add the new filter element to the "Filters" section
+            var filtersContainer = document.getElementById("filters-container");
+            filtersContainer.appendChild(filterElement);
+
+            // Clear the input field
+            document.getElementById("filter-input").value = "";
+        }
+        }
+    </script>
+</body>
+</html>

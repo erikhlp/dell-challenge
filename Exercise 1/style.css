@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+    color: #fff;
+}
+
+.bg-teal {
+    background-color: #027DB8;
+}
+
+.bg-blue {
+    background-color: #027BFF;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.f-direc {
+    flex-direction: column;
+}
+
+.hello {
+    margin: 20px 0 0 0;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.container {
+    /* width: 100%; */
+    padding: 20px;
+}
+
+.center-container {
+    flex-grow: 1;
+    height: 80vh;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.table-selection {
+    background-color: #ccc;
+    height: 100%;
+    padding: 0 20px;
+    flex-direction: column;
+}
+
+select {
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+}
+
+select:focus-visible {
+    outline: none;
+}
+
+#filter-input {
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#filter-input:focus-visible { 
+    outline: none;
+}
+
+#filters-container {
+    border: 1px solid #ccc;
+    height: 100px;
+    overflow: auto;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    margin: 5px;
+    border: #ccc solid 1px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    height: fit-content;
+}
+
+.filter-box {
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #ccc;
+    padding: 10px 20px;
+}
+
+.add-filter {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.filter-preview {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: #ccc; */
+    height: 100%;
+    padding: 0 20px;
+}
+
+.data-preview {
+    background-color: #ccc;
+    background-color: #ccc;
+    height: 90%;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.add-button {
+    margin-left: 5px;
+    text-align: center;
+    border: none;
+    color: #fff;
+    background-color: black;
+    border-radius: 5px;
+}
