@@ -5,13 +5,13 @@ import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
 
-# Your PostgreSQL database connection parameters
+# The PostgreSQL database connection parameters
 db_params = {
-    'dbname': 'your_database_name',
-    'user': 'your_username',
-    'password': 'your_password',
-    'host': 'your_host',
-    'port': 'your_port'
+    'dbname': 'database_name',
+    'user': 'username',
+    'password': 'password',
+    'host': 'host',
+    'port': 'port'
 }
 
 async def fetch_data(api_url):
