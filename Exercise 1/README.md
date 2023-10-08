@@ -11,6 +11,7 @@ How would you deploy this web page so that users can access it online? Talk abou
 and the technologies needed.
 
 **Answer**
+
 To deploy this web page, we'll need the following infrastructure, resources, and technologies:
 - **Web Hosting Service**: You will need a web hosting service to store the HTML, CSS, and JavaScript files and make them accessible to users on the internet. There are various hosting options available, including shared hosting, virtual private servers (VPS), cloud hosting, and dedicated servers. The choice depends on your expected traffic and budget;
 - **Server Configuration**: If we're using a VPS or dedicated server, we'll need to configure the server environment to support our web application. This typically involves setting up a web server like Apache, Nginx, or a cloud service-specific server.
@@ -29,6 +30,7 @@ To deploy this web page, we'll need the following infrastructure, resources, and
 How would you modify the code in order to populate the dropdown menu with values coming from a database? Talk about possible database solutions, and how the backend can interact with the frontend.
 
 **Answer**
+
 To populate a dropdown menu with values coming from a database, we'll need a backend server to interact with the database and provide data to the frontend. Here are the steps to achieve this:
 - **Choose a Database Solution**:
  - **SQL Database**: If we're dealing with structured data, we can use SQL databases like MySQL, PostgreSQL, or SQLite.

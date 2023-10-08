@@ -1,6 +1,6 @@
 import asyncio
 import aiohttp
-import json
+# import json
 import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine

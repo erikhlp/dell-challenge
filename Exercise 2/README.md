@@ -19,6 +19,7 @@ If you didn’t know the structure of the JSON, and there was an arbitrary level
 how would you need to change the code to dynamically unnest the data into a single-indexed dataframe?
 
 **Answer**
+
 If the structure of the JSON data is unknown and we need to dynamically unnest it into a single-indexed DataFrame, we can use a recursive function to flatten the nested structure.
 
 
@@ -27,6 +28,7 @@ If you had to scale this application to read and load data for hundreds of count
 few minutes, what strategies could be used in terms of coding patterns, technologies, resources and infrastructure?
 
 **Answer**
+
 To scale the application to read and load data for hundreds of countries and refresh the database every few minutes, we can consider several strategies in terms of coding patterns, technologies, resources, and infrastructure:
 
 - **Asynchronous Processing**: Use asynchronous programming to efficiently handle multiple API requests concurrently. We can leverage Python's asyncio library to manage asynchronous tasks and aiohttp for asynchronous HTTP requests.
